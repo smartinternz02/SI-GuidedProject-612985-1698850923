@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Caption Result</title>
+
+    <!-- Add your custom CSS styles here -->
+    <style>
+        body {
+            background-image: url("https://wallpapercave.com/wp/wp3377178.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            font-family: 'Helvetica', sans-serif; /* Change the font */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Display children in a column */
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            height: 100vh;
+            color: #ffffff; /* Change text color to white */
+        }
+
+        h1 {
+            text-align: center;
+            margin: 10px 0; /* Add some vertical spacing */
+            font-size: 36px; /* Increase font size */
+            font-family: 'Times New Roman', Times, serif; /* Change the font */
+            background-color: #000000; /* Black background */
+            color: #ffffff; /* White text color */
+            display: inline-block; /* Display as inline block to apply shadow to each letter */
+            padding: 10px; /* Add padding for spacing */
+            border-radius: 10px; /* Add rounded corners */
+            text-shadow:
+                3px 3px 0 #000, /* Bottom right */
+                -3px 3px 0 #000, /* Bottom left */
+                3px -3px 0 #000, /* Top right */
+                -3px -3px 0 #000; /* Top left */
+        }
+
+        p {
+            text-align: center;
+            margin: 10px 0; /* Add some vertical spacing */
+            font-size: 24px; /* Increase font size */
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 20px auto;
+            border: 3px solid #ffffff;
+            border-radius: 10px;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Caption Result</h1>
+    <img src="data:image/jpeg;base64,{{ encoded_image }}" alt="Uploaded Image">
+    <p><strong>Caption:</strong> {{ caption }}</p>
+    <form action="/home">
+        <input type="submit" value="Back to Homepage">
+    </form>
+</body>
+</html>

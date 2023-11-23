@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Caption Generation</title>
+
+    <!-- Add your custom CSS styles here -->
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            background-image: url("https://wallpapercave.com/wp/wp3377178.jpg");
+            background-size: cover;
+            background-position: center;
+            min-height: 100px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            margin: 0; /* Add this to remove default margin */
+            padding: 0; /* Add this to remove default padding */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 100px auto; /* Adjust the margin to center the container */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add some opacity to the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        input[type="file"] {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Image Caption Generation</h1>
+        <p>Upload an image, and we'll generate a caption for you!</p>
+
+        <form action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Generate Caption</button>
+        </form>
+    </div>
+</body>
+</html>
